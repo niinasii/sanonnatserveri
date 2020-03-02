@@ -2,13 +2,11 @@ require('dotenv').config();
 const Pool = require('pg').Pool;
 const salasana = process.env.PGPASSWORD;
 const pguser = process.env.PGUSER;
-const pghost = process.env.PGHOST;
-const pgdatabase = process.env.PGDATABASE;
 const conopts = {
     user: pguser,
     password: salasana,
-    host: pghost,
-    database: pgdatabase
+    host: 'localhost',
+    database: 'kurssi'
 }
 
 const allas = new Pool(conopts);
